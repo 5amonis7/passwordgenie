@@ -1,0 +1,187 @@
+.App{
+    @include display-flex;
+
+    &-underline{
+        width: 60%;
+        margin-bottom: 5%;
+    }
+
+    &-title{
+        margin: 10% 10% 0 10%;
+        font-family: $main-font;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        & h1{
+            text-align: center;
+            font-size: 2rem;
+            
+            & span{
+                @include transition-ease;
+            }
+        }
+
+        & .icon{
+            font-size: 3rem;
+            margin-left: 10px;
+            color: $secondary;
+            @include transition-ease;
+            
+
+            &:hover{
+                transform: rotate(720deg);
+            }
+        }
+    }
+
+    &-description{
+        text-align: center;
+        width: 90%;
+        font-family: $third-font;
+        font-weight: map-get($font-weights, 'medium');
+        font-size: 1.2rem;
+    }
+
+    &-generate{
+        width: 100%;
+        @include display-flex;
+        position: relative;
+
+        &_password{
+            font-size: 2rem;
+            font-weight: map-get($font-weights, 'medium');
+            font-family: $secondary-font;
+            margin: 10%;
+            min-height: 5rem;
+        }
+
+        & .generator{
+            background: $third;
+            width: 15rem;
+            height: 15rem;
+            border-radius: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 10%;
+            box-shadow: 0px 0px 5px black;
+            @include transition-ease;
+
+            &:hover{
+                width: 16rem;
+                height: 16rem;
+            }
+
+            & h1{
+                font-family: $secondary-font;
+                font-size: 2.5rem;
+            }
+
+            & button{
+                background: $secondary;
+                color: $forth;
+                width: 8rem;
+                border-radius: 20px;
+                height: 3rem;
+                border: none;
+                font-size: 1.2rem;
+                font-family: $third-font;
+                font-weight: map-get($font-weights, 'medium');
+                cursor: pointer;
+
+                &:active{
+                    background: $main;
+                    box-shadow: 0px 0px 10px black;
+                    color: $third;
+                }
+            }
+        }
+    }
+
+    &-download{
+        background: $secondary;
+        color: $forth;
+        width: 10rem;
+        border-radius: 20px;
+        height: 4rem;
+        border: none;
+        font-size: 1.5rem;
+        font-family: $third-font;
+        font-weight: map-get($font-weights, 'medium');
+        margin: 10%;
+        cursor: pointer;
+
+        &:active{
+            background: $main;
+            box-shadow: 0px 0px 10px black;
+            color: $third;
+        }
+    }
+
+    &-footer{
+        width: 100%;
+        height: 3rem;
+        background: $third;
+    }
+}
+
+@keyframes color{
+    from {
+        color: #141E61;
+    }
+    to {
+        color: blue;
+    }
+}
+
+.circle{
+    width: 13%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $main;
+    color: white;
+    @include display-flex;
+    font-size: 2rem;
+    box-shadow: 0px 0px 10px black;
+    @include transition-ease;
+
+    &:hover{
+        transform: rotate(720deg);
+    }
+}
+.circle1{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: rotate(40deg)
+}
+.circle2{
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+    transform: rotate(-30deg)
+}
+.circle3{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: rotate(-40deg)
+}
+.circle4{
+    position: absolute;
+    top: 10rem;
+    right: 1rem;
+    transform: rotate(50deg)
+}
+
+@for $i from 1 through 3{
+    .color-change:nth-child(#{$i}){
+        :hover{
+            transition: 0.5s ease-out;
+            color: blue;
+        }
+    }
+} 

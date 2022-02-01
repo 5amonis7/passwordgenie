@@ -1,0 +1,173 @@
+@include media-md{
+    .circle{
+        font-size: 3rem;
+    }
+    .circle2{
+        top: 16rem;
+    }
+    .circle4{
+        top: 16rem;
+    }
+    .App{
+
+        &-title{
+            width: 40rem;
+            height: 10rem;
+
+            & .color-change{
+                font-size: 3.5rem;
+            }
+
+            & .icon{
+                font-size: 5.5rem;
+                margin-left: 10%;
+            }
+        }
+
+        &-description{
+            font-size: 1.6rem;
+        }
+
+        &-generate{
+            height: 45rem;
+            justify-content: flex-end;
+
+            &_easy{
+                position: absolute;
+                top: 2rem;
+                left: 1.5rem;
+            }
+
+            &_hard{
+                position: absolute;
+                top: 2rem;
+                right: 1.5rem;
+            }
+
+            &_password{
+                margin: 5%;
+            }
+        }
+    }
+}
+
+@include media-lg{
+    .circle{
+        font-size: 4rem;
+        max-width: 10rem;
+    }
+    .circle2{
+        top: 20rem;
+    }
+    .circle4{
+        top: 20rem;
+    }
+    .loading{
+        margin-top: 15% !important;
+        width: 8rem;
+    }
+    .App{
+
+        &-generate{
+            height: 35rem;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+
+            &_easy{
+                position: relative;
+            }
+
+            &_hard{
+                position: relative;
+            }
+
+            & .generator{
+                margin: 0;
+                margin-top: 5%;
+            }
+
+            &_password{
+                margin-top: 12rem;
+                width: 20rem;
+                text-align: center;
+            }
+        }
+        &-download{
+            position: absolute;
+            bottom: 2rem;
+            margin: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+@include media-xl{
+    .circle{
+        font-size: 6rem;
+    }
+    .circle2{
+        top: 35rem;
+    }
+    .circle4{
+        top: 35rem;
+    }
+    .App{
+
+        &-title{
+            width: 60rem;
+
+            & .color-change{
+                font-size: 6rem;
+
+                & br{
+                    display: none;
+                }
+            }
+            & .icon{
+                font-size: 8rem;
+            }
+        }
+
+        &-description{
+            width: 70%;
+            font-size: 2.5rem;
+        }
+
+        &-generate{
+            height: 40rem;
+
+            &_password{
+                margin-top: 17rem
+            }
+
+            & .generator{
+                width: 20rem;
+                height: 20rem;
+
+                &:hover{
+                    width: 22rem;
+                    height: 22rem;
+                }
+
+                & h1{
+                    font-size: 3rem;
+                }
+
+                & button{
+                    width: 10rem;
+                    height: 4rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &-download{
+            width: 13rem;
+            height: 5rem;
+            font-size: 1.7rem;
+        }
+    }
+}

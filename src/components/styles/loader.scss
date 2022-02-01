@@ -1,0 +1,40 @@
+.loading{
+    margin: 10%;
+    min-height: 5rem;
+    @include display-flex;
+}
+.wrapper {
+    position: relative;
+    width: 40px;
+	height: 40px;
+}
+.loader-1 span {
+	position: absolute;
+	top: 0; left: 0;
+	bottom: 0; right: 0;
+	height: 32px;
+	width: 32px;
+	clip: rect(0px, 32px, 32px, 16px);
+	animation: spin-1 1.2s linear infinite;
+}
+@keyframes spin-1 {
+	0%   { transform: rotate(-70deg); }
+	100% { transform: rotate(150deg); }
+}
+.loader-1 span::after {
+	content: "";
+    box-sizing: border-box;
+	position: absolute;
+	top: 0; left: 0;
+	bottom: 0; right: 0;
+	clip: rect(0, 32px, 32px, 16px);
+	border: 3px solid #000;
+	border-radius: 50%;
+	animation: spin-2 1.2s linear infinite;
+}
+@keyframes spin-2 {
+	0%   { transform: rotate(-140deg); }
+	50%  { transform: rotate(-160deg); }
+	100% { transform: rotate(140deg); }
+}
+

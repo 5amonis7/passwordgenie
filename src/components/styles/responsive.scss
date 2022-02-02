@@ -1,4 +1,7 @@
 @include media-md{
+    .App-box{
+        height: 45vh;
+    }
     .circle{
         font-size: 3rem;
     }
@@ -52,6 +55,9 @@
 }
 
 @include media-lg{
+    .App-box{
+        height: 55vh;
+    }
     .circle{
         font-size: 4rem;
         max-width: 10rem;
@@ -105,6 +111,9 @@
 
 
 @include media-xl{
+    .App-box{
+        height: 80vh;
+    }
     .circle{
         font-size: 6rem;
     }

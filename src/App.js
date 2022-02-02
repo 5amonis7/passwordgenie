@@ -86,34 +86,39 @@ function App() {
 
   return (
     <div className="App">
-      <div className="circle circle1">!</div>
-      <div className="circle circle2">$</div>
-      <div className="circle circle3">#</div>
-      <div className="circle circle4">@</div>
 
-      <div className="App-title">
-        <h1 className="color-change">
-          <span>P</span>
-          <span>a</span>
-          <span>s</span>
-          <span>s</span>
-          <span>w</span>
-          <span>o</span>
-          <span>r</span>
-          <span>d</span>
-          <br />
-          <span> G</span>
-          <span>e</span>
-          <span>n</span>
-          <span>i</span>
-          <span>e</span>
-        </h1>
-        <FontAwesomeIcon className='icon' icon={faMagic} />
-      </div>
+      <div className="App-box">
+        <div className="circle circle1">!</div>
+        <div className="circle circle2">$</div>
+        <div className="circle circle3">#</div>
+        <div className="circle circle4">@</div>
 
-      <img className='App-underline' src={require('./components/images/literate.png')} alt='underline' />
+        <div className="App-title">
+          <h1 className="color-change">
+            <span>P</span>
+            <span>a</span>
+            <span>s</span>
+            <span>s</span>
+            <span>w</span>
+            <span>o</span>
+            <span>r</span>
+            <span>d</span>
+            <br />
+            <span> G</span>
+            <span>e</span>
+            <span>n</span>
+            <span>i</span>
+            <span>e</span>
+          </h1>
+          <FontAwesomeIcon className='icon' icon={faMagic} />
+        </div>
 
-      <p className="App-description">Password Genie will gladly generate you a password that is either easy to remember or hard to figure out. He will make sure to include the new standards for passwords so no one can easily figure out what it is. Down below you have an option for a short or longer password. If you choose to, you can also have the password downloaded to your computer so you never forget it.</p>
+        <img className='App-underline' src={require('./components/images/literate.png')} alt='underline' />
+        </div>
+
+        <p className="App-description">Password Genie will gladly generate you a password that is either easy to remember or hard to figure out. He will make sure to include the new standards for passwords so no one can easily figure out what it is. Down below you have an option for a short or longer password. If you choose to, you can also have the password downloaded to your computer so you never forget it.</p>
+  
+
 
       <div className="App-generate">
 

@@ -1,9 +1,23 @@
 .App{
     @include display-flex;
 
+    &-box{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35vh;
+        background: $third;
+        @include display-flex;
+        box-shadow: inset 0px 0px 10px black;
+        text-shadow: 0px 0px 5px black;
+    }
+
     &-underline{
         width: 60%;
+        height: 20%;
         margin-bottom: 5%;
+        filter: drop-shadow(0px 0px 5px black);
     }
 
     &-title{
@@ -28,6 +42,7 @@
             margin-left: 10px;
             color: $secondary;
             @include transition-ease;
+            filter: drop-shadow(0px 0px 5px black);
             
 
             &:hover{
@@ -42,6 +57,7 @@
         font-family: $third-font;
         font-weight: map-get($font-weights, 'medium');
         font-size: 1.2rem;
+        margin-top: 5%;
     }
 
     &-generate{
@@ -125,6 +141,7 @@
         width: 100%;
         height: 3rem;
         background: $third;
+        box-shadow: 0px 0px 10px black;
     }
 }
 
@@ -147,6 +164,7 @@
     font-size: 2rem;
     box-shadow: 0px 0px 10px black;
     @include transition-ease;
+    border: 1px solid $forth;
 
     &:hover{
         transform: rotate(720deg);

@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './components/styles/App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagic } from '@fortawesome/free-solid-svg-icons';
-import Loader from './components/loader';
+import { faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
   const [ loading, setLoading ] = useState(false);
   const [ password, setPassword ] = useState('Password');
+
 
   // Easy Password
   function easy(){
@@ -28,11 +28,20 @@ function App() {
     }
     let result = beginning + middle + end;
 
-    setLoading(true)
-    setTimeout(() =>{
-      setPassword(result)
-      setLoading(false)
-    }, 3000)
+    
+    setPassword(result)
+    const password = document.getElementsByClassName("App-generate_password")[0];
+    const easy1 = document.getElementsByClassName("easy1")[0];
+    const easy2 = document.getElementsByClassName("easy2")[0];
+    easy1.style.background = '#e06649';
+    easy2.style.background = '#e06649';
+    password.style.borderColor = '#e2633e';
+    setTimeout(() => {
+      password.style.borderColor = 'white';
+      easy1.style.background = 'white';
+      easy2.style.background = 'white';
+    }, 1000)
+    
   }
 
   // Hard Password
@@ -67,11 +76,19 @@ function App() {
     }
     let result = start + upper + startMid + mid + endMid + end;
     
-    setLoading(true)
-    setTimeout(() =>{
-      setPassword(result)
-      setLoading(false)
-    }, 3000)
+   
+    setPassword(result)
+    const password = document.getElementsByClassName("App-generate_password")[0];
+    const hard1 = document.getElementsByClassName("hard1")[0];
+    const hard2 = document.getElementsByClassName("hard2")[0];
+    hard1.style.background = '#e06649';
+    hard2.style.background = '#e06649';
+    password.style.borderColor = '#e2633e';
+    setTimeout(() => {
+      password.style.borderColor = 'white';
+      hard1.style.background = 'white';
+    hard2.style.background = 'white';
+    }, 1000)
   }
 
   // Download password
@@ -87,11 +104,9 @@ function App() {
   return (
     <div className="App">
 
+      
+
       <div className="App-box">
-        <div className="circle circle1">!</div>
-        <div className="circle circle2">$</div>
-        <div className="circle circle3">#</div>
-        <div className="circle circle4">@</div>
 
         <div className="App-title">
           <h1 className="color-change">
@@ -103,20 +118,17 @@ function App() {
             <span>o</span>
             <span>r</span>
             <span>d</span>
-            <br />
             <span> G</span>
             <span>e</span>
             <span>n</span>
             <span>i</span>
             <span>e</span>
           </h1>
-          <FontAwesomeIcon className='icon' icon={faMagic} />
+          <FontAwesomeIcon className='icon' icon={faShieldAlt} />
+        </div>
         </div>
 
-        <img className='App-underline' src={require('./components/images/literate.png')} alt='underline' />
-        </div>
-
-        <p className="App-description">Password Genie will gladly generate you a password that is either easy to remember or hard to figure out. He will make sure to include the new standards for passwords so no one can easily figure out what it is. Down below you have an option for a short or longer password. If you choose to, you can also have the password downloaded to your computer so you never forget it.</p>
+        <p className="App-description">Password Genie will gladly generate you a password that is either easy to remember or hard to figure out. He will make sure to include the new standards for passwords so no one can easily figure out what it is. Down below you have an option for a short or longer password. If you choose to, you can also have the password downloaded to your device so you never forget it.</p>
   
 
 
@@ -127,20 +139,24 @@ function App() {
           <button onClick={easy}>Generate</button>
         </div>
 
-        {loading ? <Loader />:
-         <h3 className="App-generate_password">{password}</h3>
-         }
+        <hr className="easy1" />
+        <hr className="easy2" />
+
+        <hr className='hard1' />
+        <hr className='hard2' />
+          
+        <h3 className="App-generate_password">{password}</h3>
+        
+         
 
         <div className="App-generate_hard generator">
           <h1>Hard</h1>
           <button onClick={hard}>Generate</button>
         </div>
 
-        <button onClick={downloadTxtFile} className="App-download">Download</button>
-
       </div>
 
-      <footer className="App-footer"></footer>
+      <button onClick={downloadTxtFile} className="App-download">Download</button>
       
     </div>
   );

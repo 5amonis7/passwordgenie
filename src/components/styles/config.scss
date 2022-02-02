@@ -1,13 +1,7 @@
-$main: #0F044C;
-$secondary: #141E61;
-$third: #787A91;
-$forth: #EEEEEE;
+
 
 $font-weights: ("regular": 500, "medium": 700, "bold": 900);
 
-$main-font: 'Nunito', sans-serif;
-$secondary-font: 'Trocchi', serif;
-$third-font: 'Nunito Sans', sans-serif;
 
 @mixin test-border{
     border: 3px solid red;

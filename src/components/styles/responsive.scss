@@ -1,139 +1,28 @@
 @include media-md{
-    .App-box{
-        height: 45vh;
+    .easy1{
+        top: 5rem;
+        left: 10rem;
     }
-    .circle{
-        font-size: 3rem;
+    .easy2{
+        top: 7.8rem;
+        left: 10.4rem;
+        width: 16.8%;
     }
-    .circle2{
-        top: 16rem;
+    .hard1{
+        top: 5rem;
+        right: 10rem;
     }
-    .circle4{
-        top: 16rem;
-    }
-    .App{
-
-        &-title{
-            width: 40rem;
-            height: 10rem;
-
-            & .color-change{
-                font-size: 3.5rem;
-            }
-
-            & .icon{
-                font-size: 5.5rem;
-                margin-left: 10%;
-            }
-        }
-
-        &-description{
-            font-size: 1.6rem;
-        }
-
-        &-generate{
-            height: 45rem;
-            justify-content: flex-end;
-
-            &_easy{
-                position: absolute;
-                top: 2rem;
-                left: 1.5rem;
-            }
-
-            &_hard{
-                position: absolute;
-                top: 2rem;
-                right: 1.5rem;
-            }
-
-            &_password{
-                margin: 5%;
-            }
-        }
-    }
-}
-
-@include media-lg{
-    .App-box{
-        height: 55vh;
-    }
-    .circle{
-        font-size: 4rem;
-        max-width: 10rem;
-    }
-    .circle2{
-        top: 20rem;
-    }
-    .circle4{
-        top: 20rem;
-    }
-    .loading{
-        margin-top: 15% !important;
-        width: 8rem;
-    }
-    .App{
-
-        &-generate{
-            height: 35rem;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-
-            &_easy{
-                position: relative;
-            }
-
-            &_hard{
-                position: relative;
-            }
-
-            & .generator{
-                margin: 0;
-                margin-top: 5%;
-            }
-
-            &_password{
-                margin-top: 12rem;
-                width: 20rem;
-                text-align: center;
-            }
-        }
-        &-download{
-            position: absolute;
-            bottom: 2rem;
-            margin: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-}
-
-
-@include media-xl{
-    .App-box{
-        height: 80vh;
-    }
-    .circle{
-        font-size: 6rem;
-    }
-    .circle2{
-        top: 35rem;
-    }
-    .circle4{
-        top: 35rem;
+    .hard2{
+        top: 7.8rem;
+        right: 10.4rem;
+        width: 16.8%;
     }
     .App{
 
         &-title{
-            width: 60rem;
 
-            & .color-change{
-                font-size: 6rem;
-
-                & br{
-                    display: none;
-                }
+            & h1{
+                font-size: 4rem;
             }
             & .icon{
                 font-size: 8rem;
@@ -142,41 +31,117 @@
 
         &-description{
             width: 70%;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
 
         &-generate{
-            height: 40rem;
-
-            &_password{
-                margin-top: 17rem
-            }
+            width: 70%;
+            max-width: 33rem;
 
             & .generator{
-                width: 20rem;
-                height: 20rem;
-
-                &:hover{
-                    width: 22rem;
-                    height: 22rem;
-                }
-
-                & h1{
-                    font-size: 3rem;
-                }
+                width: 10rem;
+                height: 10rem;
 
                 & button{
-                    width: 10rem;
-                    height: 4rem;
-                    font-size: 1.5rem;
+                    width: 7rem;
                 }
             }
         }
 
         &-download{
-            width: 13rem;
-            height: 5rem;
-            font-size: 1.7rem;
+            width: 10rem;
+            height: 2.5rem;
+        }
+    }
+}
+
+@include media-lg{
+    .easy1{
+        top: 6rem;
+        left: 12rem;
+    }
+    .easy2{
+        top: 10.3rem;
+        left: 11.7rem;
+        width: 21%;
+    }
+    .hard1{
+        top: 6rem;
+        right: 12rem;
+    }
+    .hard2{
+        top: 10.3rem;
+        right: 11.7rem;
+        width: 21%;
+    }
+    .App{
+
+        &-generate{
+            max-width: 40rem;
+            height: 17rem;
+
+            & .generator{
+                width: 12rem;
+                height: 12rem;
+
+            }
+        }
+    }
+}
+
+@include media-xl{
+    .easy1{
+        top: 6rem;
+        left: 12rem;
+        width: 15%;
+    }
+    .easy2{
+        top: 12rem;
+        left: 13.5rem;
+        width: 24%;
+    }
+    .hard1{
+        top: 6rem;
+        right: 12rem;
+        width: 15%;
+    }
+    .hard2{
+        top: 12rem;
+        right: 13.5rem;
+        width: 24%;
+    }
+    .App{
+
+        &-title{
+            
+            & h1{
+                font-size: 6rem;
+            }
+        }
+
+        &-description{
+            margin-top: 5%;
+            width: 60%;
+            font-size: 2rem;
+        }
+
+        &-generate{
+            width: 50%;
+            height: 22rem;
+            max-width: 50rem;
+
+            &_password{
+                width: 20rem;
+                height: 4rem;
+                font-size: 2rem;
+            }
+        }
+
+        &-download{
+            width: 16rem;
+            height: 4rem;
+            border-radius: 40px;
+            font-size: 2.5rem;
         }
     }
 }
